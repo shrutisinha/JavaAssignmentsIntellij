@@ -2,29 +2,28 @@ package default_initialization_assignment.shruti.assignment.singleton;
 
 public class Singleton {
     //makes sure singleton instance is created only once
-    private static Singleton obj = new Singleton();
+    private static final String TAG = Singleton.class.getSimpleName();
+    private static Singleton obj;
     private String s;
 
-    /* A private Constructor prevents any other
-    * class from instantiating.
-    */
+    /**
+     * Private constructor used to prevent default initializations of the object
+     */
     private Singleton() {
     }
 
 
-    //String s;
-    public static Singleton create_obj(String str) {
-        /*s=str;*/
-		/*The above line is commented out since we cannot make 
-		 *a static reference to a non static field so that was
-		 * producing an error.
-		 */
-        // Singleton obj=new Singleton();
+    /**
+     * Returns the singleton instance of the object by updating the String variable
+     * @param str String that is to be updated
+     * @return Singleton object of the Singleton class
+     */
+    public static Singleton getInstance(String str) {
+        if(obj == null){
+            obj = new Singleton();
+        }
+        //members of static class objects can be initialized only using object reference of the class;
         obj.s = str;
-		/*The above line initializes variable 's' of newly created 
-		 * object obj to the string passed to the method.
-		 */
-        //System.out.println("obj "+obj.s);
         return obj;
     }
 
