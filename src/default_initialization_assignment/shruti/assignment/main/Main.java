@@ -2,7 +2,7 @@ package default_initialization_assignment.shruti.assignment.main;
 
 
 import default_initialization_assignment.shruti.assignment.data.Data;
-import default_initialization_assignment.shruti.assignment.singleton.Singleton;
+import default_initialization_assignment.shruti.assignment.singleton.SingletonClass;
 
 public class Main {
 
@@ -14,12 +14,12 @@ public class Main {
         obj1.print();
         obj1.printLocal();
 
-        Singleton obj2 = Singleton.getInstance("shruti");
+        SingletonClass obj2 = SingletonClass.getInstance("shruti");
         obj2.print();
-        Singleton obj3 = Singleton.getInstance("suruti");
+        SingletonClass obj3 = SingletonClass.getInstance("suruti");
         obj2.print();
         obj3.print();
-        Singleton obj4 = Singleton.getInstance(null);
+        SingletonClass obj4 = SingletonClass.getInstance(null);
     }
 }
 
