@@ -10,6 +10,7 @@ public class Singleton {
      * Private constructor used to prevent default initializations of the object
      */
     private Singleton() {
+        // private to prevent default initialization.
     }
 
 
