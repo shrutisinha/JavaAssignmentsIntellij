@@ -2,14 +2,18 @@ package default_initialization_assignment.shruti.assignment.singleton;
 
 public class SingletonClass {
     //makes sure singleton instance is created only once
+    //**STATIC VARIABLES***********************************************************************************************/
     private static final String TAG = SingletonClass.class.getSimpleName();
+
+    //**MEMBER VARIABLES***********************************************************************************************/
     private static SingletonClass sSinglObj;
     private String mSampleString;
+
+    //region Intializations
 
     private SingletonClass() {
         //required empty constructor to prevent default initializations
     }
-
 
     /**
      * Returns the singleton instance of the object by updating the String variable
@@ -26,9 +30,17 @@ public class SingletonClass {
         return sSinglObj;
     }
 
+    //endregion
+
+    //region Class Interaction Methods
+
     public void print() {
         System.out.println(mSampleString);
     }
+
+    //endregion
+
+    //region Public Getters
 
     public String getCurrentString(){
         return mSampleString;
@@ -41,5 +53,7 @@ public class SingletonClass {
             return mSampleString.length();
         }
     }
+
+    //endregion
 }
 
