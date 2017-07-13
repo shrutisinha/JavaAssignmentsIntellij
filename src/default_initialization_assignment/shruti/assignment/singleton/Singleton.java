@@ -6,11 +6,8 @@ public class Singleton {
     private static Singleton obj;
     private String s;
 
-    /**
-     * Private constructor used to prevent default initializations of the object
-     */
     private Singleton() {
-        // private to prevent default initialization.
+        //required empty constructor to prevent default initializations
     }
 
 
