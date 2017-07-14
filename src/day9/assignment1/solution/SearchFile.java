@@ -36,7 +36,10 @@ public class SearchFile {
             s = br.readLine();
 
             if (s.equals("exit"))break;
-            found=path.findFiles(s, "/home");
+
+            char seperator = File.separatorChar;
+            String directory=seperator+"home";
+            found=path.findFiles(s, directory);
             List<File> filesearches;
             filesearches=path.getResult();
             if(!found){
